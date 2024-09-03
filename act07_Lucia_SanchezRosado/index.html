@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ING Direct</title>
+    <link rel="stylesheet" href="Assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+    <script src="Assets/scripts/scripts.js"></script>
+    <link rel="stylesheet" href="Assets/fontawesome-free-5.15.4-web/css/all.css">
+    <script src="Assets/fontawesome-free-5.15.4-web/js/all.js"></script>
+
+</head>
+<body onload="fInicio()">
+    <div id="formulario_cuenta">
+        <div id="modificar_cuenta">
+                
+                <div id="titulo_modificar_cuenta">Modifica tu CUENTA NARANJA</div>
+                <br>   
+                <label for="c_titular">Nombre del titular</label>
+                <input type="text" id="cm_titular" autocomplete="off" maxlength="50" class="input">
+                <label for="c_nif">Nº de identificación</label>
+                <input type="text" id="cm_nif" autocomplete="off" maxlength="50" class="input">
+                <br>
+                <button type="button" onclick="fModificarCuenta()">Modificar</button>
+                <button type="button" onclick="fCancelarMC()">Cancelar</button>
+        
+        </div>
+        <div id="modificar_movimiento">
+                
+            <div id="titulo_modificar_movimiento">Modifica tu MOVIMIENTO NARANJA</div>
+            <br>   
+            <label for="c_titular">Importe</label>
+            <input type="text" id="mm_importe" autocomplete="off" maxlength="50" class="input">
+            <label for="c_nif">Concepto</label>
+            <input type="text" id="mm_concepto" autocomplete="off" maxlength="50" class="input">
+            <br>
+            <button type="button" onclick="fModificarMovimiento()">Modificar</button>
+            <button type="button" onclick="fCancelarMM()">Cancelar</button>
+    
+    </div>
+        </div>    
+<header>
+        <div id="div_logo" onclick="fMostrarBeneficios()"><img src="Assets/img/ING_Group_N.V._Logo.svg.png" alt=""></div>
+    </header>
+    <nav>
+        <div onclick="fMostrarBeneficios()">Home</div>
+        <div onclick="fMostrarContacto()">Contacto</div>
+        <div onclick="fMostrarMovimientos()">Movimientos</div>
+        <div onclick="fMostrarCuentas()">Cuentas</div>
+    </nav>
+    <section>
+        <div id="div_contacto">
+            <div id="cabecera_contacto">
+                ¿En qué podemos ayudarte?
+            </div>
+            <div id="div_foto_contacto"><img src="Assets/img/foto_contacto.png" alt=""></div>               
+            <div id="cabecera_descripcion">
+                Si tienes alguna pregunta, tenemos unas cuantas formas de darte la respuesta que buscas. 
+            </div>
+
+            <div class="div_contacto_telef">
+                <div class="titulo_telef">Si ya eres cliente</div>
+                <div class="telef">91 206 66 66</div>
+                <div class="titulo_telef">Si llamas desde el extranjero</div>
+                <div class="telef">+34 91 206 66 66</div>
+            </div>
+            <div class="div_contacto_telef">
+                <div class="titulo_telef">Si todavía no eres cliente</div>
+                <div class="telef">91 206 66 55</div>
+                <div class="titulo_telef">Si llamas desde el extranjero</div>
+                <div class="telef">+34 91 206 66 55</div>
+            </div>
+        </div>
+        <div id="div_beneficios">
+            <div id="div_cajon_beneficios">
+             <div id="cabecera_beneficios">La libertad nos hace inexplicables</div>
+            <div id="descripcion_beneficios">Disfruta de una cuenta sin comisiones ni condiciones al traer tu nómina.</div>
+            <div id="div_inexplicables">¡Solo para inexplicables!</div>
+            </div>
+            <div id="cta_registro">
+                <div id="cta_titulo">¿Cómo puedo abrir mi cuenta nómina o pensión?</div>
+                <div id="cta_descripcion">Muy sencillo: puedes realizarlo todo de forma online sin que tengas que desplazarte a ningún sitio. Puedes contratar desde esta misma página en menos de cinco minutos, pero si quieres conocer en detalle cómo es el proceso, te contamos en la siguiente página cómo abrir tu cuenta online.</div>
+                <div id="cta_boton">Abre tu Cuenta NÓMINA</div>
+            </div>   
+        </div>
+        <div id="div_cuentas">
+            <div id="cuenta_insertar">
+                <div id="titulo_insertar_cuenta">Inserta una NUEVA CUENTA</div>
+                <br>   
+                <label for="c_titular">Nombre del titular</label>
+                <input type="text" id="c_titular" autocomplete="off" maxlength="50" class="input">
+                <label for="c_nif">Nº de identificación </label>
+                <input type="text" id="c_nif" autocomplete="off" maxlength="50" class="input">
+                <br>
+                <button type="button" onclick="fInsertarCuenta()">Insertar</button>
+            </div>
+            <div id="titulo_cuentas">Cuentas NARANJA</div>
+            <div id="cajon_cuentas"></div>
+        </div>
+        <div id="div_movimientos">
+            <div id="movimiento_insertar">
+                <div id="titulo_insertar_movimiento">Inserta un NUEVO MOVIMIENTO</div>
+                <br>   
+                <label for="c_titular_cuenta">ID titular</label>
+                <br>
+                <div id="div_combo_select"></div>
+                <br>
+                <label for="c_importe">Importe</label>
+                <input type="text" id="m_importe" autocomplete="off" maxlength="50" class="input">
+                <label for="c_conceptos">Conceptos</label>
+                <input type="text" id="m_concepto" autocomplete="off" maxlength="50" class="input">
+                <br>
+                <button type="button" onclick="fInsertarMovimiento()">Insertar</button>
+            </div>
+            <div id="titulo_movimientos">Movimientos NARANJA</div>
+            <div id="cajon_movimientos"></div>
+        </div>
+    </section>
+    <footer>
+        &copy LSR - Abril 2024
+    </footer>
+</body>
+</html>
